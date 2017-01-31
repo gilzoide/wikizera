@@ -1,0 +1,6 @@
+# Pacotes para execução
+flask
+Flask-MongoEngine
+Flask-Security
+Flask-Admin
+Flask-Bootstrap
