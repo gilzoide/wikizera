@@ -9,6 +9,7 @@ from db import db
 class Pagina(db.Document):
     """Página da wiki, em markdown"""
     name = db.StringField(unique=True)
+    content = db.StringField()
 
 
 class Role(db.Document, RoleMixin):
@@ -23,12 +24,13 @@ class Role(db.Document, RoleMixin):
 
 class User(db.Document, UserMixin):
     """Usuário, seguro com senha, participante de Roles e talz"""
-    name = db.StringField(max_length=255)
+    username = db.StringField(max_length=255)
     email = db.EmailField(max_length=255, unique=True)
     password = db.StringField(max_length=255)
     active = db.BooleanField(default=True)
     roles = db.ListField(db.ReferenceField(Role, reverse_delete_rule=db.DENY), default=[])
+    pages = db.ListField(db.ReferenceField(Pagina, reverse_delete_rule=db.NULLIFY), default=[])
 
     @classmethod
-    def create_user(cls, name, password, roles=None, active=True):
-        return cls(name=name, password=password, roles=roles, active=active)
+    def create_user(cls, email, password, username=None, roles=None, active=True):
+        return cls(email=email, password=password, username=username, roles=roles, active=active)

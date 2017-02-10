@@ -22,5 +22,7 @@ npm-debug.log
 venv/
 *.pyc
 __pycache__/
+# e dos testes
+.coverage
 # e do PyCharm
 .idea/

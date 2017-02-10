@@ -1,5 +1,7 @@
 # Pacotes para execução
 flask
+flask-restful
+flask-cors
 Flask-MongoEngine
 Flask-Security
 Flask-Admin

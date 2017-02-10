@@ -1,0 +1,5 @@
+# Pacotes para teste
+nose
+mock
+rednose
+coverage

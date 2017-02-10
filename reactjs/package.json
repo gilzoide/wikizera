@@ -11,6 +11,9 @@
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
     "whatwg-fetch": "^2.0.2"
   },
   "scripts": {
