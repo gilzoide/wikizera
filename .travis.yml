@@ -1,0 +1,29 @@
+language: python
+
+python:
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- '3.6'
+
+services:
+- mongodb
+
+node_js: node
+
+cache:
+  pip: true
+  directories:
+  - reactjs/node_modules
+
+before_install:
+- pip install -r flask/requirements.txt
+- pip install -r flask/test-requirements.txt
+- nvm install node
+- npm update -q
+- npm install -C reactjs/
+
+script:
+- nosetests -w flask/
+- npm test -C reactjs/
