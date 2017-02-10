@@ -23,8 +23,7 @@ before_install:
 - nvm install node
 - nvm which
 - npm update -q
-- npm install -C reactjs/ --only=prod
-- npm install -C reactjs/ --only=dev
+- npm install -C reactjs/
 
 script:
 - nosetests -w flask/
