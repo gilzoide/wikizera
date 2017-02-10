@@ -19,10 +19,13 @@ cache:
 
 env:
 - CI=true  # npm test sai quando acabar
+- NODE_ENV=dev  # npm install instala os rolê de dev também
 
 before_install:
+- pip install -r flask/requirements.txt
 - pip install -r flask/test-requirements.txt
-- npm install -C reactjs/
+- npm install -C reactjs/ --save-dev
 
 script:
+- nosetests -w flask/
 - npm test -C reactjs/
