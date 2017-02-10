@@ -1,0 +1,28 @@
+language: python
+
+python:
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- '3.6'
+
+node_js:
+- node
+- '4'
+- '5'
+
+cache:
+  pip: true
+  directories:
+  - reactjs/node_modules
+
+env:
+- CI=true  # npm test sai quando acabar
+
+before_install:
+- pip install flask/requirements.txt
+- npm install -C reactjs/
+
+script:
+- npm test -C reactjs/
