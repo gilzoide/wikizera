@@ -3,7 +3,7 @@
 from flask_security import UserMixin, RoleMixin
 from flask_security.utils import encrypt_password
 
-from db import db
+from wikizera.db import db
 
 
 class Pagina(db.Document):

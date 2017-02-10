@@ -19,7 +19,7 @@ npm-debug.log
 *~
 *.swp
 # coisas do python
-venv/
+venv*/
 *.pyc
 __pycache__/
 # e dos testes

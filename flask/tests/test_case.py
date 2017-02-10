@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from ClientApp import test_app
+from tests.ClientApp import test_app
 from wikizera.modelos import User, Pagina
 
 import unittest

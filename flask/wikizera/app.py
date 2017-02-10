@@ -6,20 +6,20 @@ from flask_cors import CORS
 from flask_security import Security, MongoEngineUserDatastore
 from flask_bootstrap import Bootstrap
 
-from blueprints.index import index_blueprint
-import resources.pages
-import resources.user
-from db import db
-from modelos import Role, User
-import admin
+from wikizera.blueprints.index import index_blueprint
+import wikizera.resources.pages as pages
+import wikizera.resources.user as user
+from wikizera.db import db
+from wikizera.modelos import Role, User
+import wikizera.admin as admin
 
 from os import path
 
 
 def create_api(app):
     api = Api(app)
-    resources.user.setup(api)
-    resources.pages.setup(api)
+    user.setup(api)
+    pages.setup(api)
     return api
 
 
