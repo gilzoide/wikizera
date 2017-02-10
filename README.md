@@ -1,5 +1,7 @@
 Wikizera
 ========
+[![Build Status](https://travis-ci.org/gilzoide/wikizera.svg?branch=master)](https://travis-ci.org/gilzoide/wikizera)
+
 Wiki simples usando [flask](http://flask.pocoo.org/) e
 [reactjs](https://facebook.github.io/react/) como dois processos separados.
 
