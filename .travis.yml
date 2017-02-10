@@ -20,6 +20,8 @@ cache:
 before_install:
 - pip install -r flask/requirements.txt
 - pip install -r flask/test-requirements.txt
+- nvm install node
+- nvm which
 - npm update -q
 - npm install -C reactjs/ --only=prod
 - npm install -C reactjs/ --only=dev
