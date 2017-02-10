@@ -21,7 +21,7 @@ env:
 - CI=true  # npm test sai quando acabar
 
 before_install:
-- pip install flask/requirements.txt
+- pip install -r flask/test-requirements.txt
 - npm install -C reactjs/
 
 script:
