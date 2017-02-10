@@ -7,24 +7,21 @@ python:
 - '3.5'
 - '3.6'
 
-node_js:
-- node
-- '4'
-- '5'
+services:
+- mongodb
+
+node_js: node
 
 cache:
   pip: true
   directories:
   - reactjs/node_modules
 
-env:
-- CI=true  # npm test sai quando acabar
-- NODE_ENV=dev  # npm install instala os rolê de dev também
-
 before_install:
 - pip install -r flask/requirements.txt
 - pip install -r flask/test-requirements.txt
-- npm install -C reactjs/ --save-dev
+- npm install -C reactjs/ --only=prod
+- npm install -C reactjs/ --only=dev
 
 script:
 - nosetests -w flask/
